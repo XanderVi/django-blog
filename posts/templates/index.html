@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Не молчи!</title>
+
+    {% load staticfiles %}
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/posts.css' %}">
+</head>
+
+<body style="background-color:rgba(8, 8, 8, 0.89);" class="common">
+    <div class='page-header'>
+        <h1><a href="/"><strong>Библиотека идей</strong></a></h1>
+        <h2><class="top-menu"><strong>Eсли Вам есть что сказать - <em><a href="{% url 'post_new' %}" class="top-menu">напишите</a></em></strong></h2>
+    </div>
+    
+    <div class='description'>
+        <h3>Наверняка у Вас есть идеи на счет того, как можно сделать мир лучше.<br>
+            Возможно, они слишком радикальны, чтобы высказывать их открыто.<br>
+            Или вы не хотите нарваться на толпы хейтеров и троллей, которыми, к сожалению, полон интернет.<br>
+            Не имеет значения, какие причины заставляют Вас молчать - здесь Вы можете высказаться. Потому что у нас:<br>
+        </h3>
+        <ul>
+        <li><h3><del>Никаких лайков</del></h3></li>
+        <li><h3><del>Никаких комментариев</del></h3></li>
+        <li><h3><del>Никаких имён</del></h3></li>
+        <li><h3>Полная свобода самовыражения</h3></li>
+        </ul>
+        <h3>Возможно, именно Ваша идея сможет вдохновить кого-то и изменить мир. Сделаем это вместе.</h3>
+    </div>
+
+    {% for post in posts %}
+        <div class='post'>
+            <h2><div class='title'>{{ post.title }}</div></h2>
+            <h3><p>{{ post.text }}</p></h3>
+            <p>Опубликовано: {{ post.published_date }}</p>
+        </div>
+    {% endfor %}
+</body>
+</html>
