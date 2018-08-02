@@ -7,6 +7,7 @@ class Post(models.Model):
     title = models.CharField(max_length=100, null=True, blank=True)
     #preview = models.CharField(max_length=500)
     text = models.TextField()
+    youtube_link = models.CharField(max_length=200, null=True, blank=True)
     date_create = models.DateTimeField(
             default=timezone.now)
     published_date = models.DateTimeField(
