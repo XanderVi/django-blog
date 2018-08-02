@@ -38,7 +38,7 @@
         <div class='post'>
             <h2><div class='title'>{{ post.title }}</div></h2>
             <h3><p>{{ post.text }}</p></h3>
-<center><iframe width="860" height="515" src="https://www.youtube.com/embed/{{str(post.youtube_link)[-11:]}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+<center><iframe width="860" height="515" src="https://www.youtube.com/embed/{{post.youtube_link}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
             <p>Опубликовано: {{ post.published_date }}</p>
         </div>
     {% endfor %}

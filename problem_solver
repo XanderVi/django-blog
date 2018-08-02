@@ -1,0 +1,3 @@
+
+Error: 'no such table' or when migrate do nothing.
+Solution: python manage.py migrate --run-syncdb
