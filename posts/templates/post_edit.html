@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Мне есть, что сказать</title>
+    <title>У меня есть прикольный видосик</title>
 
     {% load staticfiles %}
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -15,11 +15,11 @@
 
 <body style="background-color:rgba(8, 8, 8, 0.89);" class="common">
     {% block content %}
-    <font color='white'><h2><center>Новая идея</center></h2></font>
+    <font color='white'><h2><center>Новый видосик</center></h2></font>
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
-        <center><button type="submit" class="save btn btn-default">Высказаться!</button></center><br>
-        <center><button type="button" class="btn"><a href="/">Вернуться назад</a></button></center>
+        <center><button type="submit" class="save btn btn-default">Поделиться</button></center><br>
+        <center><button type="button" class="btn"><a href="/">Не делиться</a></button></center>
     </form>
     {% endblock %}
 </body>
